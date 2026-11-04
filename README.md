@@ -26,8 +26,9 @@ A Python command-line application that helps individuals, freelancers, and small
 Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd <project-folder>
+git clone https://github.com/stmartinsagbibenson-hub/systems-thinking-with-python-cohort-02
+
+cd Finance-Automation-CLI
 ```
 
 Create a virtual environment:

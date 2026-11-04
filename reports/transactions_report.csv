@@ -1,0 +1,235 @@
+id,transaction_id,date,description,amount,type,category,currency,source_file
+1,TXN000001,2026-08-01,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+2,TXN000002,2026-08-01,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+3,TXN000003,2026-08-02,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+4,TXN000004,2026-08-02,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+5,TXN000005,2026-08-02,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+6,TXN000006,2026-08-03,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+7,TXN000007,2026-08-03,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+8,TXN000008,2026-08-03,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+9,TXN000009,2026-08-04,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+10,TXN000010,2026-08-04,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+11,TXN000011,2026-08-04,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+12,TXN000012,2026-08-05,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+13,TXN000013,2026-08-05,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+14,TXN000014,2026-08-05,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+15,TXN000015,2026-08-06,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+16,TXN000016,2026-08-06,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+17,TXN000017,2026-08-06,Cash deposit,50000.00,income,Income,NGN,bank_transactions.csv
+18,TXN000018,2026-08-07,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+19,TXN000019,2026-08-07,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+20,TXN000020,2026-08-07,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+21,TXN000021,2026-08-08,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+22,TXN000022,2026-08-08,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+23,TXN000023,2026-08-08,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+24,TXN000024,2026-08-09,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+25,TXN000025,2026-08-09,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+26,TXN000026,2026-08-09,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+27,TXN000027,2026-08-10,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+28,TXN000028,2026-08-10,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+29,TXN000029,2026-08-10,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+30,TXN000030,2026-08-11,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+31,TXN000032,2026-08-11,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+32,TXN000033,2026-08-12,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+33,TXN000034,2026-08-12,Refund from merchant,18500.00,income,Refunds,NGN,bank_transactions.csv
+34,TXN000035,2026-08-12,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+35,TXN000036,2026-08-13,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+36,TXN000037,2026-08-13,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+37,TXN000038,2026-08-13,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+38,TXN000039,2026-08-14,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+39,TXN000040,2026-08-14,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+40,TXN000041,2026-08-14,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+41,TXN000042,2026-08-15,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+42,TXN000043,2026-08-15,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+43,TXN000044,2026-08-15,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+44,TXN000045,2026-08-16,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+45,TXN000046,2026-08-16,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+46,TXN000048,2026-08-17,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+47,TXN000049,2026-08-17,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+48,TXN000050,2026-08-17,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+49,TXN000051,2026-08-18,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+50,TXN000052,2026-08-18,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+51,TXN000054,2026-08-19,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+52,TXN000055,2026-08-19,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+53,TXN000056,2026-08-19,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+54,TXN000057,2026-08-20,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+55,TXN000058,2026-08-20,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+56,TXN000059,2026-08-20,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+57,TXN000060,2026-08-21,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+58,TXN000061,2026-08-21,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+59,TXN000063,2026-08-22,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+60,TXN000064,2026-08-22,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+61,TXN000065,2026-08-22,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+62,TXN000066,2026-08-23,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+63,TXN000067,2026-08-23,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+64,TXN000068,2026-08-23,Freelance payment,87500.00,income,Income,NGN,bank_transactions.csv
+65,TXN000069,2026-08-24,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+66,TXN000070,2026-08-24,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+67,TXN000071,2026-08-24,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+68,TXN000072,2026-08-25,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+69,TXN000073,2026-08-25,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+70,TXN000074,2026-08-25,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+71,TXN000075,2026-08-26,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+72,TXN000076,2026-08-26,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+73,TXN000077,2026-08-26,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+74,TXN000078,2026-08-27,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+75,TXN000079,2026-08-27,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+76,TXN000080,2026-08-27,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+77,TXN000081,2026-08-28,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+78,TXN000082,2026-08-28,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+79,TXN000083,2026-08-28,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+80,TXN000084,2026-08-29,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+81,TXN000085,2026-08-29,Salary payment,245000.00,income,Income,NGN,bank_transactions.csv
+82,TXN000086,2026-08-29,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+83,TXN000087,2026-08-30,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+84,TXN000088,2026-08-30,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+85,TXN000089,2026-08-30,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+86,TXN000090,2026-08-31,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+87,TXN000091,2026-08-31,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+88,TXN000092,2026-08-31,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+89,TXN000095,2026-09-01,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+90,TXN000096,2026-09-02,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+91,TXN000097,2026-09-02,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+92,TXN000098,2026-09-02,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+93,TXN000099,2026-09-03,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+94,TXN000100,2026-09-03,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+95,TXN000101,2026-09-03,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+96,TXN000102,2026-09-04,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+97,TXN000103,2026-09-04,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+98,TXN000104,2026-09-04,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+99,TXN000105,2026-09-05,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+100,TXN000107,2026-09-05,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+101,TXN000108,2026-09-06,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+102,TXN000109,2026-09-06,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+103,TXN000110,2026-09-06,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+104,TXN000111,2026-09-07,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+105,TXN000112,2026-09-07,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+106,TXN000113,2026-09-07,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+107,TXN000114,2026-09-08,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+108,TXN000115,2026-09-08,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+109,TXN000116,2026-09-08,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+110,TXN000117,2026-09-09,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+111,TXN000118,2026-09-09,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+112,TXN000119,2026-09-09,Cash deposit,50000.00,income,Income,NGN,bank_transactions.csv
+113,TXN000120,2026-09-10,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+114,TXN000121,2026-09-10,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+115,TXN000122,2026-09-10,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+116,TXN000123,2026-09-11,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+117,TXN000125,2026-09-11,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+118,TXN000126,2026-09-12,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+119,TXN000127,2026-09-12,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+120,TXN000128,2026-09-12,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+121,TXN000129,2026-09-13,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+122,TXN000130,2026-09-13,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+123,TXN000131,2026-09-13,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+124,TXN000132,2026-09-14,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+125,TXN000133,2026-09-14,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+126,TXN000134,2026-09-14,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+127,TXN000135,2026-09-15,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+128,TXN000136,2026-09-15,Refund from merchant,18500.00,income,Refunds,NGN,bank_transactions.csv
+129,TXN000137,2026-09-15,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+130,TXN000138,2026-09-16,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+131,TXN000139,2026-09-16,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+132,TXN000140,2026-09-16,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+133,TXN000142,2026-09-17,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+134,TXN000143,2026-09-17,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+135,TXN000144,2026-09-18,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+136,TXN000145,2026-09-18,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+137,TXN000146,2026-09-18,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+138,TXN000147,2026-09-19,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+139,TXN000148,2026-09-19,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+140,TXN000149,2026-09-19,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+141,TXN000150,2026-09-20,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+142,TXN000151,2026-09-20,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+143,TXN000152,2026-09-20,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+144,TXN000153,2026-09-21,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+145,TXN000154,2026-09-21,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+146,TXN000156,2026-09-22,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+147,TXN000157,2026-09-22,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+148,TXN000158,2026-09-22,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+149,TXN000160,2026-09-23,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+150,TXN000161,2026-09-23,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+151,TXN000162,2026-09-24,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+152,TXN000163,2026-09-24,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+153,TXN000164,2026-09-24,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+154,TXN000165,2026-09-25,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+155,TXN000166,2026-09-25,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+156,TXN000167,2026-09-25,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+157,TXN000168,2026-09-26,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+158,TXN000169,2026-09-26,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+159,TXN000170,2026-09-26,Freelance payment,87500.00,income,Income,NGN,bank_transactions.csv
+160,TXN000171,2026-09-27,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+161,TXN000172,2026-09-27,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+162,TXN000173,2026-09-27,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+163,TXN000174,2026-09-28,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+164,TXN000175,2026-09-28,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+165,TXN000176,2026-09-28,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+166,TXN000177,2026-09-29,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+167,TXN000178,2026-09-29,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+168,TXN000179,2026-09-29,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+169,TXN000180,2026-09-30,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+170,TXN000181,2026-09-30,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+171,TXN000182,2026-09-30,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+172,TXN000183,2026-10-01,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+173,TXN000184,2026-10-01,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+174,TXN000185,2026-10-01,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+175,TXN000187,2026-10-02,Salary payment,245000.00,income,Income,NGN,bank_transactions.csv
+176,TXN000189,2026-10-03,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+177,TXN000190,2026-10-03,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+178,TXN000191,2026-10-03,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+179,TXN000192,2026-10-04,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+180,TXN000193,2026-10-04,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+181,TXN000194,2026-10-04,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+182,TXN000195,2026-10-05,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+183,TXN000196,2026-10-05,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+184,TXN000197,2026-10-05,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+185,TXN000198,2026-10-06,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+186,TXN000199,2026-10-06,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+187,TXN000200,2026-10-06,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+188,TXN000201,2026-10-07,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+189,TXN000202,2026-10-07,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+190,TXN000203,2026-10-07,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+191,TXN000204,2026-10-08,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+192,TXN000205,2026-10-08,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+193,TXN000206,2026-10-08,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+194,TXN000207,2026-10-09,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+195,TXN000208,2026-10-09,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+196,TXN000209,2026-10-09,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+197,TXN000210,2026-10-10,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+198,TXN000211,2026-10-10,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+199,TXN000213,2026-10-11,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+200,TXN000214,2026-10-11,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+201,TXN000215,2026-10-11,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+202,TXN000216,2026-10-12,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+203,TXN000218,2026-10-12,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+204,TXN000219,2026-10-13,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+205,TXN000220,2026-10-13,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+206,TXN000221,2026-10-13,Cash deposit,50000.00,income,Income,NGN,bank_transactions.csv
+207,TXN000222,2026-10-14,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+208,TXN000223,2026-10-14,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+209,TXN000224,2026-10-14,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+210,TXN000225,2026-10-15,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+211,TXN000226,2026-10-15,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+212,TXN000227,2026-10-15,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+213,TXN000228,2026-10-16,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+214,TXN000229,2026-10-16,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+215,TXN000230,2026-10-16,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+216,TXN000231,2026-10-17,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+217,TXN000232,2026-10-17,Grocery shopping,18500.00,expense,Food & Groceries,NGN,bank_transactions.csv
+218,TXN000233,2026-10-17,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+219,TXN000234,2026-10-18,Interest earned,1250.00,income,Income,NGN,bank_transactions.csv
+220,TXN000236,2026-10-18,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+221,TXN000237,2026-10-19,Airtime purchase,3000.00,expense,Communication,NGN,bank_transactions.csv
+222,TXN000238,2026-10-19,Refund from merchant,18500.00,income,Refunds,NGN,bank_transactions.csv
+223,TXN000239,2026-10-19,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+224,TXN000240,2026-10-20,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
+225,TXN000241,2026-10-20,Online purchase,22800.00,expense,Shopping,NGN,bank_transactions.csv
+226,TXN000242,2026-10-20,Transport payment,6500.00,expense,Transport,NGN,bank_transactions.csv
+227,TXN000243,2026-10-21,Funds received,35000.00,income,Income,NGN,bank_transactions.csv
+228,TXN000244,2026-10-21,Electricity bill,27500.00,expense,Utilities,NGN,bank_transactions.csv
+229,TXN000245,2026-10-21,Internet subscription,12000.00,expense,Utilities,NGN,bank_transactions.csv
+230,TXN000246,2026-10-22,Restaurant payment,8500.00,expense,Dining,NGN,bank_transactions.csv
+231,TXN000247,2026-10-22,Fuel station,15500.00,expense,Transport,NGN,bank_transactions.csv
+232,TXN000249,2026-10-23,Transfer to savings,40000.00,expense,Savings,NGN,bank_transactions.csv
+233,TXN000250,2026-10-23,Pharmacy purchase,7200.00,expense,Healthcare,NGN,bank_transactions.csv
+234,TXN000251,2026-10-23,Water bill,4500.00,expense,Utilities,NGN,bank_transactions.csv
