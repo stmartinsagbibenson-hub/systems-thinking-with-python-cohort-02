@@ -1,0 +1,345 @@
+# Personal & Small-Business Finance Automation CLI --- Product Requirements Document
+
+**Project type:** Python command-line application  
+**Target users:** Individuals, freelancers, and small-business owners  
+**Suggested project duration:** 24 hours  
+**Primary outcome:** Import transaction data, organize spending, produce reports, compare budgets, and project savings with transparent calculations.
+
+## 1. Product Overview
+
+Build a command-line finance automation tool that helps an individual or small business understand where money comes from, where it goes, and how current saving habits may affect future balances.
+
+The tool uses locally stored CSV transaction data. It categorizes transactions, summarizes income and expenses, compares actual spending with user-defined budgets, and estimates future savings based on configurable assumptions.
+
+This is an educational finance-management tool, not a banking application, accounting system, tax adviser, or investment recommendation service.
+
+## 2. Problem Statement
+
+People and small businesses often track money across spreadsheets, bank exports, receipts, and memory. Manual tracking is time-consuming and makes it difficult to answer basic questions consistently:
+
+- How much money came in and went out during a period?
+- Which categories account for the most spending?
+- Did spending stay within the planned budget?
+- How much might be saved by a target date if current habits continue?
+- What happens if monthly savings contributions change?
+
+The tool automates these calculations and presents results in readable reports.
+
+## 3. Goals and Success Criteria
+
+### Goals
+1. Import transactions from a documented CSV format.
+2. Validate transaction data and clearly report malformed rows.
+3. Categorize income and expenses using editable rules, with a fallback category.
+4. Generate financial summaries for a selected date range.
+5. Compare actual spending with monthly category budgets.
+6. Project future savings using explicit assumptions.
+7. Keep the application usable from a terminal and straightforward to test.
+
+### Success criteria
+- A user can import the supplied sample CSV and receive a useful summary without editing the code.
+- Valid rows are processed even if other rows are invalid; rejected rows are reported.
+- Reports correctly calculate total income, total expenses, net cash flow, category totals, and budget variance.
+- Savings projections are reproducible and state their assumptions.
+- Core parsing and calculation logic is covered by automated tests.
+- Setup, commands, CSV format, and limitations are documented in the README.
+
+## 4. Target Users
+
+- **Individuals:** Want a clearer view of personal income, spending, and savings.
+- **Freelancers:** Need to review irregular income and recurring business expenses.
+- **Small-business owners:** Want a lightweight view of cash flow and spending by category.
+
+For the project scope, assume one user and one currency per dataset. Multi-user accounts and multi-currency conversion are not required.
+
+## 5. Scope
+
+### In scope — required features
+
+#### A. Command-line interface
+Provide a clear CLI with help text, sensible errors, and commands such as:
+
+- `import` — validate and import a CSV file.
+- `summary` — show income, expenses, and net cash flow for a date range.
+- `report` — produce a category and budget report.
+- `budget` — set or update monthly spending limits by category.
+- `forecast` — project savings over a chosen number of months.
+- `transactions` — list or filter imported transactions.
+
+Exact command names and flags may differ, provided all capabilities are available and documented.
+
+#### B. CSV transaction import
+Support a documented CSV schema containing at least:
+
+| Field | Description | Example |
+|---|---|---|
+| `date` | Transaction date in `YYYY-MM-DD` format | `2026-10-03` |
+| `description` | Payee, source, or transaction description | `Internet subscription` |
+| `amount` | Positive numeric amount | `12000.00` |
+| `type` | `income` or `expense` | `expense` |
+| `category` | Optional category supplied by the user | `Utilities` |
+
+Use positive amounts for both transaction types; `type` determines whether an amount counts as income or expense. Do not mix amount conventions silently.
+
+Requirements:
+- Validate dates, amounts, required columns, and transaction types.
+- Handle empty files, duplicate-looking rows, missing fields, and malformed values gracefully.
+- Report row numbers and reasons for rejected rows.
+- Do not silently discard invalid rows.
+- Warn about importing the same source file more than once, or provide an explicit override.
+- Include a sample CSV with realistic synthetic transactions.
+
+#### C. Transaction categorization
+- Support editable keyword-to-category rules, e.g. `fuel` → `Transport` and `salary` → `Income`.
+- Use case-insensitive matching.
+- Let a valid explicit CSV category take precedence over automatic rules.
+- Use `Uncategorized` when no rule matches.
+- Keep rules separate from calculation logic and document conflict resolution.
+
+#### D. Financial summary
+For a selected date range, display:
+- Total income.
+- Total expenses.
+- Net cash flow (income minus expenses).
+- Number of transactions.
+- Spending totals by category.
+- Largest expense transactions, where data is available.
+
+Support date filters and, optionally, filters by category or transaction type.
+
+#### E. Budgets and budget comparison
+- Allow monthly spending limits by expense category.
+- Compare actual expenses with the applicable budget.
+- Display budget amount, amount spent, remaining amount, and overspend/underspend.
+- Clearly flag categories that exceed their limits.
+- Do not treat income categories as spending budgets.
+- Persist budgets locally between runs.
+
+#### F. Savings projection
+Allow a user to provide:
+- Starting savings balance.
+- Planned recurring contribution per month.
+- Number of months to project.
+- Optional annual interest rate, defaulting to 0%.
+
+Calculate a month-by-month estimate and final projected balance. If interest is implemented, document the compounding convention and apply it consistently. The minimum no-interest formula is:
+
+`projected balance = starting balance + (monthly contribution × number of months)`
+
+If monthly interest is supported, define whether contributions occur at the beginning or end of each month. Projections must be labelled estimates, not guarantees.
+
+#### G. Reports and export
+- Print readable summaries in the terminal.
+- Export at least one report to CSV, plain text, or Markdown.
+- Include the reporting period and currency label in exported reports when known.
+- State whether figures are based on all transactions or filtered data.
+
+#### H. Persistence
+- Store transactions and budget settings locally using SQLite or another simple local format.
+- Choose one storage approach and document it.
+- Provide a way to inspect or reset local data without manually editing internal files.
+- Do not store bank login credentials or connect to real bank accounts.
+
+#### I. Tests and documentation
+- Unit-test calculations, CSV validation, categorization, budgets, and savings projections.
+- Include representative valid and invalid input cases.
+- Provide setup instructions, usage examples, sample data, and known limitations.
+- Keep CLI parsing separate from business logic.
+
+### Optional stretch goals
+- Recurring transaction detection.
+- Monthly report generation.
+- Simple anomaly flags for unusually large expenses, using a documented threshold.
+- JSON report export.
+- Configurable currency display.
+- Charts saved as image files.
+- Forecast scenarios comparing different monthly contributions.
+
+### Out of scope
+- Bank integrations, open-banking APIs, payment processing, and live account syncing.
+- Investment advice, stock/crypto forecasting, credit scoring, or loan underwriting.
+- Tax filing, statutory accounting, payroll, invoicing, and full bookkeeping workflows.
+- Multi-user authentication, cloud sync, web dashboard, and mobile application.
+- Automatic transfers, payment execution, or other actions that move money.
+- AI-generated financial advice or claims that projections predict actual outcomes.
+
+## 6. Functional Requirements
+
+| ID | Requirement | Priority |
+|---|---|---|
+| FR-01 | Provide a CLI with discoverable help and useful error messages. | Must |
+| FR-02 | Import transactions from the documented CSV schema. | Must |
+| FR-03 | Validate input and report invalid rows with row numbers. | Must |
+| FR-04 | Categorize transactions using editable rules and an `Uncategorized` fallback. | Must |
+| FR-05 | Summarize income, expenses, and net cash flow for a date range. | Must |
+| FR-06 | Show spending totals by category and largest expenses. | Must |
+| FR-07 | Set, persist, and compare monthly category budgets. | Must |
+| FR-08 | Generate a savings projection from starting balance and recurring contributions. | Must |
+| FR-09 | Export at least one report to a file. | Must |
+| FR-10 | Persist transactions and budgets locally. | Must |
+| FR-11 | Include automated tests and a README. | Must |
+| FR-12 | Support optional interest, scenario comparisons, or anomaly flags. | Stretch |
+
+## 7. Suggested CLI Experience
+
+Illustrative commands; exact names and flags may differ:
+
+```bash
+python -m finance_tool --help
+python -m finance_tool import data/sample_transactions.csv
+python -m finance_tool summary --from 2026-10-01 --to 2026-10-31
+python -m finance_tool report --month 2026-10 --output reports/october.md
+python -m finance_tool budget set Transport 50000
+python -m finance_tool budget report --month 2026-10
+python -m finance_tool forecast --starting-balance 150000 --monthly-contribution 25000 --months 12
+python -m finance_tool transactions --category Utilities
+```
+
+These commands are examples, not a mandated package name or exact interface.
+
+## 8. Data Model
+
+A minimal transaction record should contain:
+- Unique local ID.
+- Transaction date.
+- Description.
+- Amount.
+- Type (`income` or `expense`).
+- Category.
+- Optional import/source metadata to help detect repeated imports.
+
+A minimal budget record should contain:
+- Category.
+- Monthly limit.
+- Optional currency label.
+- Optional effective month.
+
+Use decimal-safe arithmetic for money. Prefer Python's `decimal.Decimal` or integer minor units (for example, kobo) to avoid floating-point rounding errors. Binary floating-point should not be the authoritative representation of currency.
+
+## 9. Non-Functional Requirements
+
+- **Reliability:** Invalid input must not crash the application or corrupt existing records.
+- **Accuracy:** Monetary calculations must avoid floating-point rounding errors.
+- **Usability:** Reports should be understandable to someone comfortable with a terminal but not necessarily a finance professional.
+- **Maintainability:** Separate importing, categorization, calculations, persistence, reporting, and CLI concerns.
+- **Privacy:** Data remains local by default; no transaction data is transmitted to a server.
+- **Portability:** Support a recent Python 3 version and document the tested version.
+- **Safety:** Clearly label estimates and avoid presenting them as guaranteed outcomes.
+
+## 10. Delivery Window: 24 Hours
+
+**Start:** Monday, 2 November 2026, 6:00 PM (WAT, UTC+1)  
+**Deadline:** Tuesday, 3 November 2026, 6:00 PM (WAT, UTC+1)  
+**Total elapsed time:** 24 hours
+
+The following milestone windows are a suggested plan inside the fixed
+24-hour period. Students should prioritize a working CSV import,
+correct financial summaries, persistence, and tested core calculations
+before optional enhancements.
+
+| Stage | Time window (WAT) | Focus | Expected output |
+|---|---|---|---|
+| 1. Requirements and setup | Mon 2 Nov, 6:00–7:00 PM | Review the PRD, inspect the sample CSV, choose the storage approach, and outline the CLI. | Package structure, README outline, and sample data ready. |
+| 2. CSV import and validation | Mon 2 Nov, 7:00–10:00 PM | Parse transactions, validate fields, report invalid rows, and handle duplicates. | Reliable import command with clear validation errors. |
+| 3. Categorization and persistence | Mon 2 Nov, 10:00 PM–12:00 AM | Apply category rules, preserve explicit categories, and store data locally. | Categorization logic and local persistence working. |
+| 4. Summaries and reports | Tue 3 Nov, 12:00–4:00 AM | Implement date filters, income/expense totals, category totals, and exports. | Useful summary and report output. |
+| 5. Budgets and savings forecast | Tue 3 Nov, 4:00–8:00 AM | Add monthly budgets, variance calculations, and no-interest projections. | Tested budget and forecast features. |
+| 6. CLI integration | Tue 3 Nov, 8:00–11:00 AM | Connect commands, help text, errors, and reset/inspection options. | Usable end-to-end CLI. |
+| 7. Tests and documentation | Tue 3 Nov, 11:00 AM–3:00 PM | Test valid and invalid paths, document setup, commands, assumptions, and limitations. | Test suite and complete README. |
+| 8. Final verification and submission | Tue 3 Nov, 3:00–6:00 PM | Run the full test suite, clean up the project, record the demo, and update the final PR. | Working final PR and walkthrough video. |
+
+## 11. Submission Deliverables
+
+- Python source code for the CLI application.
+- README with setup instructions, commands, assumptions, and limitations.
+- Sample transaction CSV containing synthetic data.
+- Automated tests and instructions for running them.
+- At least one example exported report.
+- A brief demonstration showing CSV import, summary/report generation,
+  budget comparison, and a savings projection.
+
+## 12. GitHub Workflow and Review
+
+- Work in the repository:
+  https://github.com/olaniyigeorge/systems-thinking-with-python-cohort-01/
+- Create a feature branch; do not push the project directly to `main`.
+- Open pull requests with **base branch set to `main`**.
+- Students may open **incremental PRs** as they progress---for
+  example, one for CSV import, another for reports and budgets, and
+  another for testing and integration.
+- Keep PRs focused, provide a useful description, and include test
+  evidence or screenshots/terminal output where helpful.
+- Ensure the final PR targets `main` and includes all completed work
+  for review.
+
+## 13. Video Submission
+
+When the project is complete, record a walkthrough video of **no more
+than 25 minutes**. The student should explain and demonstrate:
+
+1. The problem the finance tool addresses.
+2. The CLI structure and how to run it.
+3. CSV import, validation, categorization, and local persistence.
+4. Financial summaries, budgets, exports, and savings projections.
+5. Tests, key design decisions, assumptions, and known limitations.
+6. What they would improve next, such as interest calculations or
+   scenario comparisons.
+
+The student should demonstrate the tool running; reading code line by
+line for the entire video is not sufficient. Include the video link in
+the final PR description or submission message, using an access setting
+that allows the reviewer to view it.
+
+## 14. Acceptance Criteria
+
+The project is complete when:
+
+-   [ ] It runs as a CLI from a terminal and has usable
+    help/instructions.
+-   [ ] A valid CSV imports successfully and invalid rows are reported
+    with row numbers and reasons.
+-   [ ] Re-importing the same source file is detected or explicitly
+    handled.
+-   [ ] Explicit valid categories take precedence over automatic rules,
+    with `Uncategorized` as the fallback.
+-   [ ] Date-filtered summaries return correct income, expenses, net
+    cash flow, transaction count, and category totals.
+-   [ ] Monthly budgets persist and report spending, remaining budget,
+    and overspending correctly.
+-   [ ] A no-interest savings projection returns correct month-by-month
+    and final balances.
+-   [ ] At least one report can be exported and opened as a normal file.
+-   [ ] Automated tests cover successful and failing paths for key
+    calculations and input validation.
+-   [ ] README includes setup, examples, assumptions, and limitations.
+-   [ ] The final PR targets `main` in the specified repository.
+-   [ ] A walkthrough video of 25 minutes or less is linked for review.
+
+## 15. Evaluation Rubric (100 points)
+
+| Criterion | Points | What is assessed |
+|---|---:|---|
+| Core functionality | 25 | Import, summary, categorization, budgets, and projections work |
+| Correctness and edge cases | 20 | Date filters, invalid rows, duplicates, empty data, and calculations |
+| Code quality and design | 15 | Separation of concerns, readable naming, modularity, maintainability |
+| Testing | 15 | Useful automated tests for normal and failure cases |
+| CLI usability | 10 | Clear help, validation, output, and error messages |
+| Reporting and export | 5 | Useful, accurate reports saved in a usable format |
+| Documentation | 10 | Clear setup, usage, sample data, assumptions, and limitations |
+| **Total** | **100** | |
+
+## 16. Financial Assumptions and Limitations
+
+- The user is responsible for the accuracy and completeness of imported transactions.
+- CSV files may contain pending transactions, transfers, refunds, or duplicates; document how these are handled.
+- Refunds should be represented consistently (for example, as a separate credit type or an expense adjustment) or explicitly excluded. Do not silently misclassify them.
+- Transfers between a user's own accounts should not count as income or expense if the tool supports identifying them.
+- Budget comparisons use the selected month and configured category budgets.
+- Savings forecasts are mathematical scenarios based on user-provided assumptions, not financial advice or predictions.
+- Use synthetic data for examples. Never commit private financial data to version control.
+
+## 17. Guiding Principle
+
+**Build a small, understandable, tested finance tool that explains its
+calculations.** Correctness, transparency, and clear assumptions matter
+more than adding lots of features.
